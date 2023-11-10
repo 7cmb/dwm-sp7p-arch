@@ -16,7 +16,7 @@ static const char *fonts[]          = { "Source Code Pro:size=15",
 static const char dmenufont[]       = "Source Code Pro:size=16";
 static const char col_gray1[]       = "#2f261e";	/*状态条底色*/
 static const char col_gray2[]       = "#424c4c";	/*当static const unsigned int borderpx不为0时，非活动窗口外边框颜色*/
-static const char col_gray3[]       = "#d9d9d9";	/*当前非活动的title字体颜色*/
+static const char col_gray3[]       = "#f1e0c5";	/*当前非活动的title字体颜色*/
 static const char col_gray4[]       = "#55494a";	/*当前活动的title字体颜色*/
 static const char col_cyan[]        = "#947951";	/*title底色*/
 static const unsigned int baralpha = 0x84;
