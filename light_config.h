@@ -96,6 +96,7 @@ static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_g,      setlayout,      {.v = &layouts[0] } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_r,      spawn,          SHCMD("rootRofi") },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
