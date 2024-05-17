@@ -11,7 +11,7 @@ static const int smartgaps          = 0;        /* 1 means no outer gap when the
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
-static const char *fonts[]          = { "iNotoSansM NFM Med:pixelsize=15:autoint=true:autoint=true"};
+static const char *fonts[]          = { "NotoSansM NFM Med:pixelsize=15:autoint=true:autoint=true"};
 static const char dmenufont[]       = "Source Code Pro:size=8";
 static const char col_gray1[]       = "#9ab3b2";	/*状态条底色*/
 static const char col_gray2[]       = "#424c4c";	/*当static const unsigned int borderpx不为0时，非活动窗口外边框颜色*/
