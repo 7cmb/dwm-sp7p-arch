@@ -11,7 +11,8 @@ static const int smartgaps          = 0;        /* 1 means no outer gap when the
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
-static const char *fonts[]          = { "NotoSansM NFM Med:pixelsize=15:autoint=true:autoint=true"};
+static const char *fonts[]          = { "Noto Sans CJK SC Medium:size=10:autoint=true:autoint=true",
+                                        "NotoSansM NFM:pixelsize=19:autoint=true:autoint=true"};
 static const char dmenufont[]       = "Source Code Pro:size=8";
 static const char col_gray1[]       = "#9ab3b2";	/*状态条底色*/
 static const char col_gray2[]       = "#424c4c";	/*当static const unsigned int borderpx不为0时，非活动窗口外边框颜色*/
@@ -66,7 +67,7 @@ static void (*bartabfloatfns[])(Monitor *) = { NULL /* , customlayoutfn */ };
 #include "gaplessgrid.c"
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[ 󰷂  ]",      tile },    /* first entry is default */
+	{ "[󰷂]",      tile },    /* first entry is default */
 	{ "[M]",      monocle },
 //	{ "[ 󰋁  ]",      gaplessgrid },
 //	{ "float",      NULL },    /* no layout function means floating behavior */
@@ -135,7 +136,7 @@ static const Key keys[] = {
 //	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ Mod4Mask|ShiftMask,             XK_s,      spawn,          SHCMD("flameshot gui") },
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("amixer sset Master toggle") },
-	{ MODKEY|ShiftMask,             XK_b,      spawn,          SHCMD("/home/baka/commands/charge_toggle_notify.sh") },
+	{ MODKEY|ControlMask,             XK_b,      spawn,          SHCMD("/home/baka/commands/charge_toggle_notify.sh") },
 	{ MODKEY|ShiftMask,             XK_equal,  spawn,          SHCMD("amixer sset Master 5%+") },
 	{ MODKEY|ShiftMask,             XK_minus,  spawn,          SHCMD("amixer sset Master 5%-") },
 	{ MODKEY|ShiftMask,             XK_F1,     spawn,          SHCMD("xset dpms force off") },
