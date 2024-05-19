@@ -11,9 +11,9 @@ static const int smartgaps          = 0;        /* 1 means no outer gap when the
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
-static const char *fonts[]          = { "Symbols Nerd Font:pixelsize=35:autoint=true:autoint=true",
-					"Source Code Pro:size=15"};
-static const char dmenufont[]       = "Source Code Pro:size=16";
+static const char *fonts[]          = { "Noto Sans CJK SC Medium:size=10:autoint=true:autoint=true",
+                                        "NotoSansM NFM:pixelsize=24:autoint=true:autoint=true"};
+static const char dmenufont[]       = "Source Code Pro:size=8";
 static const char col_gray1[]       = "#2f261e";	/*状态条底色*/
 static const char col_gray2[]       = "#424c4c";	/*当static const unsigned int borderpx不为0时，非活动窗口外边框颜色*/
 static const char col_gray3[]       = "#f1e0c5";	/*当前非活动的title字体颜色*/
@@ -69,7 +69,7 @@ static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "[󰷂]",      tile },    /* first entry is default */
 	{ "[M]",      monocle },
-//	{ "[󰋁]",      gaplessgrid },
+//	{ "[ 󰋁  ]",      gaplessgrid },
 //	{ "float",      NULL },    /* no layout function means floating behavior */
 };
 
@@ -90,7 +90,7 @@ static const char *dmenucmd[] = { "rofi", "-show", "drun"};
 //static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
+static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x25", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -134,7 +134,9 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 //	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 //	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
+	{ Mod4Mask|ShiftMask,             XK_s,      spawn,          SHCMD("flameshot gui") },
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("amixer sset Master toggle") },
+	{ MODKEY|ControlMask,             XK_b,      spawn,          SHCMD("/home/baka/commands/charge_toggle_notify.sh") },
 	{ MODKEY|ShiftMask,             XK_equal,  spawn,          SHCMD("amixer sset Master 5%+") },
 	{ MODKEY|ShiftMask,             XK_minus,  spawn,          SHCMD("amixer sset Master 5%-") },
 	{ MODKEY|ShiftMask,             XK_F1,     spawn,          SHCMD("xset dpms force off") },

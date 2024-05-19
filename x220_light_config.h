@@ -12,7 +12,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const Bool viewontag         = True;     /* Switch view on tag switch */
 static const char *fonts[]          = { "Noto Sans CJK SC Medium:size=10:autoint=true:autoint=true",
-                                        "NotoSansM NFM:pixelsize=19:autoint=true:autoint=true"};
+                                        "NotoSansM NFM:pixelsize=24:autoint=true:autoint=true"};
 static const char dmenufont[]       = "Source Code Pro:size=8";
 static const char col_gray1[]       = "#9ab3b2";	/*状态条底色*/
 static const char col_gray2[]       = "#424c4c";	/*当static const unsigned int borderpx不为0时，非活动窗口外边框颜色*/
@@ -90,7 +90,7 @@ static const char *dmenucmd[] = { "rofi", "-show", "drun"};
 //static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
+static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x25", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
