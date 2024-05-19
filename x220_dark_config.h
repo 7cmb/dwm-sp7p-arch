@@ -136,6 +136,7 @@ static const Key keys[] = {
 //	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ Mod4Mask|ShiftMask,             XK_s,      spawn,          SHCMD("flameshot gui") },
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("amixer sset Master toggle") },
+	{ MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("amixer sset Capture toggle") },
 	{ MODKEY|ControlMask,             XK_b,      spawn,          SHCMD("/home/baka/commands/charge_toggle_notify.sh") },
 	{ MODKEY|ShiftMask,             XK_equal,  spawn,          SHCMD("amixer sset Master 5%+") },
 	{ MODKEY|ShiftMask,             XK_minus,  spawn,          SHCMD("amixer sset Master 5%-") },
