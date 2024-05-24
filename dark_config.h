@@ -140,6 +140,8 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_F1,     spawn,          SHCMD("xset dpms force off") },
 	{ MODKEY|ShiftMask,             XK_F11,      spawn,          SHCMD("light -U 5") },
 	{ MODKEY|ShiftMask,             XK_F12,      spawn,          SHCMD("light -A 5") },
+	{ Mod4Mask,             	XK_bracketleft,      spawn,          SHCMD("kill -- $(ps aux | grep '?' | grep tray | grep -v grep |awk '{print $2}')") },
+	{ Mod4Mask,             	XK_bracketright,      spawn,          SHCMD("stalonetray &") },
 	{ Mod4Mask,             	XK_l,      spawn,          SHCMD("light-locker-command -l") },
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          SHCMD("feh --recursive --randomize --bg-fill /home/baka/Pictures/wallpapers") },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
