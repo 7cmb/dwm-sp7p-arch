@@ -88,7 +88,8 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "rofi", "-show", "drun"};
 //static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "kitty", NULL };
+//static const char *termcmd[]  = { "st", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x25", NULL };
 
@@ -136,13 +137,16 @@ static const Key keys[] = {
 //	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ Mod4Mask|ShiftMask,             XK_s,      spawn,          SHCMD("flameshot gui") },
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("amixer sset Master toggle") },
-	{ MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("amixer sset Capture toggle") },
+	{ MODKEY|ShiftMask,             XK_r,      spawn,          SHCMD("amixer sset Capture toggle") },
 	{ MODKEY|ControlMask,             XK_b,      spawn,          SHCMD("/home/baka/commands/charge_toggle_notify.sh") },
 	{ MODKEY|ShiftMask,             XK_equal,  spawn,          SHCMD("amixer sset Master 5%+") },
 	{ MODKEY|ShiftMask,             XK_minus,  spawn,          SHCMD("amixer sset Master 5%-") },
 	{ MODKEY|ShiftMask,             XK_F1,     spawn,          SHCMD("xset dpms force off") },
 	{ MODKEY|ShiftMask,             XK_F11,      spawn,          SHCMD("light -U 5") },
 	{ MODKEY|ShiftMask,             XK_F12,      spawn,          SHCMD("light -A 5") },
+  { MODKEY,             	XK_bracketright,      spawn,          SHCMD("kill -- $(ps aux | grep '?' | grep tray | grep -v grep |awk '{print $2}')") },
+	{ MODKEY,             	XK_bracketleft,      spawn,          SHCMD("stalonetray &") },
+	{ MODKEY,             	XK_backslash,      spawn,          SHCMD("/home/baka/commands/remote_clip/vc.sh") },
 	{ Mod4Mask,             	XK_l,      spawn,          SHCMD("light-locker-command -l") },
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          SHCMD("feh --recursive --randomize --bg-fill /home/baka/Pictures/wallpapers") },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },

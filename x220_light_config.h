@@ -144,7 +144,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_F1,     spawn,          SHCMD("xset dpms force off") },
 	{ MODKEY|ShiftMask,             XK_F11,      spawn,          SHCMD("light -U 5") },
 	{ MODKEY|ShiftMask,             XK_F12,      spawn,          SHCMD("light -A 5") },
-	{ MODKEY,             	XK_bracketright,      spawn,          SHCMD("kill -- $(ps aux | grep '?' | grep tray | grep -v grep |awk '{print $2}')") },
+  { MODKEY,             	XK_bracketright,      spawn,          SHCMD("kill -- $(ps aux | grep '?' | grep tray | grep -v grep |awk '{print $2}')") },
 	{ MODKEY,             	XK_bracketleft,      spawn,          SHCMD("stalonetray &") },
 	{ MODKEY,             	XK_backslash,      spawn,          SHCMD("/home/baka/commands/remote_clip/vc.sh") },
 	{ Mod4Mask,             	XK_l,      spawn,          SHCMD("light-locker-command -l") },
